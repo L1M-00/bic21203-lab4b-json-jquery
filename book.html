@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4b - Retrieve JSON Data</title>
+</head>
+<body>
+    <h1>Library Book Details</h1>
+    <div id="output" role="status" aria-live="polite">Loading books...</div>
+
+    <script>
+        async function loadBooks() {
+            const outputDiv = document.getElementById("output");
+
+            try {
+                const response = await fetch("books.json");
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                const books = data.books;
+
+                outputDiv.textContent = "";
+
+                const firstTitle = document.createElement("p");
+                firstTitle.textContent = `(a) Title of the first book: ${books[0].title}`;
+                outputDiv.appendChild(firstTitle);
+
+                const secondAuthor = document.createElement("p");
+                secondAuthor.textContent = `(b) Author of the second book: ${books[1].author}`;
+                outputDiv.appendChild(secondAuthor);
+
+                const genresHeader = document.createElement("p");
+                genresHeader.textContent = "(c) Genres of both books:";
+                outputDiv.appendChild(genresHeader);
+
+                const genreList = document.createElement("ul");
+                books.forEach(book => {
+                    const li = document.createElement("li");
+                    li.textContent = `${book.title} — ${book.genres.join(", ")}`;
+                    genreList.appendChild(li);
+                });
+                outputDiv.appendChild(genreList);
+
+            } catch (error) {
+                outputDiv.textContent = "Error: Unable to load or parse books.json. Please run via a local server (e.g., Live Server).";
+                console.error("Fetch error:", error);
+            }
+        }
+
+        loadBooks();
+    </script>
+</body>
+</html>
