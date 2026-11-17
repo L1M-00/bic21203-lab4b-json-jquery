@@ -15,4 +15,4 @@
 4. Open `jquery-dom.html` in any web browser (or via Live Server) and click the button to test the alert[cite: 6].
 
 ## Screenshots
-*(把你的截图光标放在这里，直接按 Ctrl + V 粘贴图片)*
+
