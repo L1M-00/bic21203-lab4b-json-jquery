@@ -15,6 +15,7 @@
 4. Open `jquery-dom.html` in any web browser (or via Live Server) and click the button to test the alert[cite: 6].
 
 ## Screenshots
+<img width="545" height="440" alt="Screenshot 2026-11-17 132358" src="https://github.com/user-attachments/assets/d8277da8-cc81-4113-b28f-dff891b3b5e6" />
 <img width="483" height="392" alt="Screenshot 2026-11-17 131254" src="https://github.com/user-attachments/assets/7b6d5e61-4c79-4550-8248-dd95e2edcc71" />
 <img width="673" height="365" alt="Screenshot 2026-11-17 131335" src="https://github.com/user-attachments/assets/f43f8372-e274-4b02-9bc7-899bf5b64b58" />
 <img width="777" height="328" alt="Screenshot 2026-11-17 131407" src="https://github.com/user-attachments/assets/f9c1cd09-c289-4ae5-bec6-6d366f762043" />
